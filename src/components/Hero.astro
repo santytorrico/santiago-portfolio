@@ -1,0 +1,46 @@
+---
+
+---
+
+<section class="hero">
+    <img
+        src="/public/me-200.webp"
+        srcset="
+            /public/me-200.webp 200w,
+            /public/me-400.webp 400w,
+            /public/me-600.webp 600w
+        "
+        sizes="(max-width: 600px) 200px, 400px"
+        alt="Profile picture"
+        class="avatar"
+    />
+    <h1>Santiago Torrico</h1>
+    <h2>Software Developer</h2>
+    <p>Hands-on experience building AI-powered solutions through the integration of LLMs and Agentic workflows.</p>
+</div>
+
+
+<style>
+    .hero{
+        text-align: center;
+    }
+    .avatar{
+        /* display: flex;
+        justify-content: center;
+        align-content: center;
+        position: relative; */
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-inline: auto;
+    }
+    h1{
+        font-family: var(--font-heading);
+    }
+    h2{
+        font-family: var(--font-heading);
+    }
+    p{
+        font-family: var(--font-body);
+    }
+</style>

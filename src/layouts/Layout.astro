@@ -1,3 +1,11 @@
+---
+import Hero from "../components/Hero.astro";
+// Supports weights 300-700
+import '@fontsource-variable/space-grotesk';
+// Supports weights 100-900
+import '@fontsource-variable/inter';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,7 +13,7 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Santiago Torrico Hinojosa</title>
 	</head>
 	<body>
 		<slot />
@@ -13,6 +21,10 @@
 </html>
 
 <style>
+	:root{
+		--font-body: 'Space Grotesk Variable', system-ui, sans-serif;
+		--font-heading: 'Inter Variable', system-ui,sans-serif;
+	}
 	html,
 	body {
 		margin: 0;
