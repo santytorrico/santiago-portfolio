@@ -1,46 +1,87 @@
 ---
-
+import GitHub from "./icons/GitHub.astro"
+import LinkedIn from "./icons/LinkedIn.astro"
+import SocialButtons from "./SocialButtons.astro"
 ---
-
 <section class="hero">
     <img
-        src="/public/me-200.webp"
+        src="/me-200.webp"
         srcset="
-            /public/me-200.webp 200w,
-            /public/me-400.webp 400w,
-            /public/me-600.webp 600w
+            me-200.webp 200w,
+            me-400.webp 400w,
+            me-600.webp 600w
         "
-        sizes="(max-width: 600px) 200px, 400px"
+        sizes="(max-width: 600px) 150px, 200px"
         alt="Profile Picture Santiago Torrico"
         class="avatar"
     />
-    <h1>Santiago Torrico</h1>
-    <h2>Software Developer</h2>
-    <p>Hands-on experience building AI-powered solutions through the integration of LLMs and Agentic workflows.</p>
-</div>
-
+    <div class="social-info">
+        <h1>Santiago Torrico</h1>
+        <h2>Software Developer</h2>
+        <p>Hands-on experience building AI-powered solutions that turn standard apps into proactive helpers, automating insights and decisions for seamless user journeys.</p>
+        <div class = "buttons-social">
+            <SocialButtons href="https://github.com/santytorrico">
+                <GitHub/>
+                GitHub
+            </SocialButtons>
+            <SocialButtons href="https://www.linkedin.com/in/santiago-torrico-5a6099204/">
+                <LinkedIn/>
+                LinkedIn
+            </SocialButtons>
+        </div>
+    </div>
+</section>
 
 <style>
     .hero{
         text-align: center;
+        padding: 8rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
     }
     .avatar{
-        width: 200px;
-        height: 200px;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
         border-radius: 50%;
-        margin-inline: auto;
     }
-    h1{
+    @media (max-width: 700px) {
+        .hero{
+            flex-direction: column;
+            gap: 3rem;
+        }
+        .avatar{
+            max-width: 200px;
+        }
+    }
+    .social-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+    }
+    .hero h1{
         font-size: 48px;
-        margin-bottom: 0;
-        color: #007a55;
-        /* color: #484848; */
+        color: #1a1a1a;
+        margin: 0;
     }
-    h2{   
-        margin-top: 0;
-        color: #212121;
+    .hero h2{
+        font-size: 24px;
+        color: #1a1a1abd;
+        margin: 0;
     }
-    p{
-        font-size: 18px;
+    .hero p{
+        color: #1a1a1a;
+        max-width: 600px;
+        line-height: 1.6;
+        margin: 0;
+    }
+    .buttons-social{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
     }
 </style>

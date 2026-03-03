@@ -1,9 +1,14 @@
 ---
 import Hero from "../components/Hero.astro";
+import Header from "../components/Header.astro";
 // Supports weights 300-700
 import '@fontsource-variable/space-grotesk';
 // Supports weights 100-900
 import '@fontsource-variable/inter';
+// Supports weights 400-800
+import '@fontsource-variable/eb-garamond';
+// Supports weights 100-900
+import '@fontsource-variable/urbanist';
 ---
 
 <!doctype html>
@@ -13,7 +18,7 @@ import '@fontsource-variable/inter';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Santiago Torrico Hinojosa</title>
+		<title>Santiago Torrico Hinojosa Software Engineer Full Stack Developer</title>
 	</head>
 	<body>
 		<slot />
@@ -22,23 +27,36 @@ import '@fontsource-variable/inter';
 
 <style is:global>
 	:root{
-
+		color-scheme: light dark;
 		--font-body: 'Space Grotesk Variable', system-ui, sans-serif;
-		--font-heading: 'Inter Variable', system-ui,sans-serif;
+		--font-heading: 'Urbanist Variable', system-ui,sans-serif;
+	}
+	.dark{
+		background-color: #1a1a1a;
 	}
 	*{
 		box-sizing: border-box;
 	}
 	html,
 	body {
-		background-color: #f0eee6;
+		/* cards: #dec4ee;
+		dark background: #1a1a1a;
+		cards: #034f46; */
+		/* background-color: #f0eee6; */
 		/* background-color: #212121; */
+		background-color:#f0eee6;
 		font-family: var(--font-body);
 		margin: 0;
-		width: 100%;
-		height: 100%;
+	}
+	@media (prefers-color-scheme: dark) {
+		body {
+			background-color: #212121;
+		}
 	}
 	h1, h2, h3{
 		font-family: var(--font-heading);
+	}
+	a{
+		text-decoration: none;
 	}
 </style>
