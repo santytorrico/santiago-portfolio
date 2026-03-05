@@ -1,4 +1,5 @@
 ---
+import Email from "./icons/Email.astro"
 import GitHub from "./icons/GitHub.astro"
 import LinkedIn from "./icons/LinkedIn.astro"
 import SocialButtons from "./SocialButtons.astro"
@@ -28,18 +29,21 @@ import SocialButtons from "./SocialButtons.astro"
                 <LinkedIn/>
                 LinkedIn
             </SocialButtons>
+            <SocialButtons href="mailto:santy.torrico@gmail.com">
+                <Email/>
+                Email Me
+            </SocialButtons>
         </div>
     </div>
 </section>
 
 <style>
     .hero{
-        text-align: center;
-        padding: 8rem 1rem;
+        padding: 4rem 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10rem;
+        gap: 8rem;
     }
     .avatar{
         width: 100%;
@@ -47,40 +51,44 @@ import SocialButtons from "./SocialButtons.astro"
         height: auto;
         border-radius: 50%;
     }
+    .social-info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
     @media (max-width: 700px) {
         .hero{
             flex-direction: column;
             gap: 3rem;
+            text-align: center;
         }
         .avatar{
             max-width: 200px;
         }
-    }
-    .social-info{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.25rem;
+        .social-info{
+            align-items: center;
+        }
     }
     .hero h1{
         font-size: 48px;
-        color: #1a1a1a;
+        color: var(--color-text-primary);
         margin: 0;
     }
     .hero h2{
         font-size: 24px;
-        color: #1a1a1abd;
+        color: var(--color-text-secondary);
         margin: 0;
     }
     .hero p{
-        color: #1a1a1a;
+        color: var(--color-text-primary);
         max-width: 600px;
         line-height: 1.6;
         margin: 0;
     }
     .buttons-social{
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
         gap: 1rem;
         margin-top: 0.5rem;
     }
